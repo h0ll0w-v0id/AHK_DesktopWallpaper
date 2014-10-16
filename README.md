@@ -3,7 +3,6 @@ Windows_Wallpaper
 
 
 
-
 <h3>A very simple AutoHotkey script that changes Windows 7 wallpaper</h3>
 <br>
 This script was built using AutoHotkey: http://ahkscript.org/
