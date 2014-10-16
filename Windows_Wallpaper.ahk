@@ -21,7 +21,9 @@
 			
 	Project Notes:
 
-		Requires PC Running Windows 7, and a specified image in the script dir	
+		Requires PC Running Windows 7
+		
+		Requires a specified image in the script dir	
 			
 	-----------------------------------------------------------------------------------
 */
