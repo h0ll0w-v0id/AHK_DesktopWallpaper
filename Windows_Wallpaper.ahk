@@ -51,3 +51,7 @@ SetWorkingDir %A_ScriptDir%
 	}
 	
 ExitApp
+
+; reference
+; http://msdn.microsoft.com/en-us/library/ms724947%28v=vs.85%29.aspx#Desktop
+
