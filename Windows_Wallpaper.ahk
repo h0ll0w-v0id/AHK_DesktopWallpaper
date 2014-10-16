@@ -6,7 +6,7 @@
 	
 	Revision History:
 	
-	Date		Rev			Change Description
+	Date		Rev		Change Description
 	--------------------------------------------------------
 	10/16/14	1.0.0		Beta release
 	--------------------------------------------------------
