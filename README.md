@@ -1,16 +1,11 @@
 Windows_Wallpaper
-=================
+=======
+<br>A very simple AutoHotkey script that changes Windows 7 wallpaper<br>
+This script was built using [AutoHotkey](http://ahkscript.org/)
 
-
-
-<h3>A very simple AutoHotkey script that changes Windows 7 wallpaper</h3>
-<br>
-This script was built using AutoHotkey: http://ahkscript.org/
-<br>
-<br>
-<h3>Windows_Wallpaper</h3> https://github.com/h0ll0w-v0id/Windows_Wallpaper/blob/master/Windows_Wallpaper.ahk
-<br>
-=> Built with AutoHotkey 1.1.16.05 running on Windows 7 64bit
-
-
-
+<hr width=50%>
+[Windows_Wallpaper](Windows_Wallpaper.ahk)<br>
+![Preview1](preview.PNG "Preview1")<br>
+=> Current state - only sets 1 wallpaper for all monitors<br>
+=> Future state - looking at slideshow from dir and/or wallpaper per monitor<br>
+=> Built with AutoHotkey 1.1.16.05 running on Windows 7 64bit<br>
