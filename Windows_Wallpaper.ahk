@@ -9,6 +9,7 @@
 	Date		Rev		Change Description
 	--------------------------------------------------------
 	10/16/14	1.0.0		Beta release
+	10/29/14	1.0.1		Updated commnets
 	--------------------------------------------------------
 
 	Project Overview:
@@ -27,7 +28,9 @@
 			
 	--------------------------------------------------------
 */
-
+; ----------------------------------------------------------
+; Info .........: reference - http://msdn.microsoft.com/en-us/library/ms724947%28v=vs.85%29.aspx#Desktop
+; ----------------------------------------------------------
 
 #NoEnv
 #SingleInstance Force
@@ -51,7 +54,3 @@ SetWorkingDir %A_ScriptDir%
 	}
 	
 ExitApp
-
-; reference
-; http://msdn.microsoft.com/en-us/library/ms724947%28v=vs.85%29.aspx#Desktop
-
