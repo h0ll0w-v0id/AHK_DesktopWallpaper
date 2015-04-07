@@ -37,18 +37,34 @@
 #SingleInstance Force
 SetWorkingDir %A_ScriptDir%
 
+	; set vars
 	fileList =
-	fileCount = 0
+	fileCount := 0
+	fileDirectory := A_ScriptDir
 	
 	; find images in script directory
-	Loop, Files, *.jpg
+	Loop, Files, %fileDirectory%\*.jpg
    	{
    		fileList = %fileList%%A_LoopFileName%`n
    		fileCount++
 	}
+	; pick a random from 1 to the total file count
 	Random, randFile, 1, fileCount
-	newWallpaper := fileList%randFile%
-	MsgBox %, newWallpaper
+	
+	; loop back through the file array and find the one we want
+	Loop, Parse, fileList, `n
+	{
+	    If A_LoopField =  ; Omit the last linefeed (blank item) at the end of the list.
+	        continue
+	    If (A_Index = randFile)
+	    {
+	    	newWallpaper := A_LoopField
+	    	break
+	    }
+	}
+	
+	; newWallpaper := fileList%randFile%
+	; MsgBox %newWallpaper% %randFile% %fileCount% %fileList%
 	; Image1 := "Desert.JPG"
 	; Wallpaper1 := A_ScriptDir . "\" . Image1
 
