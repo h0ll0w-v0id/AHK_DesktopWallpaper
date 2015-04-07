@@ -2,7 +2,7 @@
 	--------------------------------------------------------
 	REVISION BLOCK
 		
-	Project Name: Windows_Wallpaper
+	Project Name: AHK_DesktopWallpaper.ahk
 	
 	Revision History:
 	
@@ -10,6 +10,7 @@
 	--------------------------------------------------------
 	10/16/14	1.0.0		Beta release
 	10/29/14	1.0.1		Updated commnets
+	04/07/15	1.0.2		Renamed for GitHub
 	--------------------------------------------------------
 
 	Project Overview:
