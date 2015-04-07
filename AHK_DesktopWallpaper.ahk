@@ -37,20 +37,31 @@
 #SingleInstance Force
 SetWorkingDir %A_ScriptDir%
 
-	; set image
-	Image1 := "Desert.JPG"
-	Wallpaper1 := A_ScriptDir . "\" . Image1
+	fileList =
+	fileCount = 0
+	
+	; find images in script directory
+	Loop, Files, *.jpg
+   	{
+   		fileList = %fileList%%A_LoopFileName%`n
+   		fileCount++
+	}
+	Random, randFile, 1, fileCount
+	newWallpaper := fileList%randFile%
+	MsgBox %, newWallpaper
+	; Image1 := "Desert.JPG"
+	; Wallpaper1 := A_ScriptDir . "\" . Image1
 
 	; call dll and capture return
-	returnVar := DllCall("SystemParametersInfo", UInt, 0x0014, UInt, 0, Str, Wallpaper1, UInt, 1)
+	returnVar := DllCall("SystemParametersInfo", UInt, 0x0014, UInt, 0, Str, newWallpaper, UInt, 1)
 
 	; if error
 	If !returnVar
 	{
 		MsgBox, 262192, Error Setting Wallpaper,
 		(LTrim
-		There was an error in setting %Wallpaper1% as the wallpaper.
-		`nVerify `'%Wallpaper1%`' resides in `'%A_ScriptDir%`' and run script again...
+		There was an error in setting %newWallpaper% as the wallpaper.
+		`nVerify `'%newWallpaper%`' resides in `'%A_ScriptDir%`' and run script again...
 		)
 	}
 	
