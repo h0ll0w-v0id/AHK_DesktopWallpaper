@@ -9,8 +9,11 @@
 	Date		Rev		Change Description
 	--------------------------------------------------------
 	10/16/14	1.0.0		Beta release
-	10/29/14	1.0.1		Updated commnets
+	10/29/14	1.0.1		Updated comments
 	04/07/15	1.0.2		Renamed for GitHub
+	07/14/15	1.0.3		Updated to loop through jpgs in current dir every 10 minutes
+							Now stays running, and looping though jpgs
+							Won't change background if no jpgs found
 	--------------------------------------------------------
 
 	Project Overview:
@@ -37,6 +40,15 @@
 #SingleInstance Force
 SetWorkingDir %A_ScriptDir%
 
+Loop
+{
+	GoSub, SetBackground
+	Sleep, 600000			; update every 10 minutes
+}
+
+
+SetBackground:
+
 	; set vars
 	fileList =
 	fileCount := 0
@@ -48,6 +60,13 @@ SetWorkingDir %A_ScriptDir%
    		fileList = %fileList%%A_LoopFileName%`n
    		fileCount++
 	}
+	
+	; exit if no pictures found	
+	If !fileCount
+	{
+		ExitApp
+	}
+	
 	; pick a random from 1 to the total file count
 	Random, randFile, 1, fileCount
 	
@@ -62,6 +81,9 @@ SetWorkingDir %A_ScriptDir%
 	    	break
 	    }
 	}
+	
+
+	
 	
 	; newWallpaper := fileList%randFile%
 	; MsgBox %newWallpaper% %randFile% %fileCount% %fileList%
@@ -79,6 +101,8 @@ SetWorkingDir %A_ScriptDir%
 		There was an error in setting %newWallpaper% as the wallpaper.
 		`nVerify `'%newWallpaper%`' resides in `'%A_ScriptDir%`' and run script again...
 		)
+		ExitApp
 	}
+Return
 	
-ExitApp
+
