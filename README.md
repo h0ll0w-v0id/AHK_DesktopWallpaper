@@ -5,6 +5,5 @@ This script was built using [AutoHotkey](http://ahkscript.org/)
 
 <hr width=50%>
 [AHK_DesktopWallpaper](AHK_DesktopWallpaper.ahk)<br>
-<br>=> Currently looks for *.jpg files in the script directory and randomly sets one file to the wallpaper.
-<br>=> Currently does NOT have any rotation or timers...maybe one day
-<br>=> Built with AutoHotkey 1.1.21.02 running on Windows 7 64bit<br>
+<br>=> Looks for *.jpg files in the script directory and randomly sets one to the wallpaper every 10 minutes.
+<br>=> Built with AutoHotkey 1.1.22.03 running on Windows 7 64bit<br>
